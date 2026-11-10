@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&amp;family=Karla:wght@400;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap">
-<link rel="preload" as="image" href="assets/portrait-440.webp" imagesrcset="assets/portrait-440.webp 440w, assets/portrait-880.webp 880w" imagesizes="(max-width: 899px) 220px, 420px" type="image/webp">
+<link rel="preload" as="image" href="assets/portrait-440.webp" imagesrcset="assets/portrait-440.webp 440w, assets/portrait-880.webp 880w" imagesizes="(max-width: 899px) 220px, 340px" type="image/webp">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Ginés Coll Zurita","jobTitle":"Growth & CRO Manager","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressCountry":"ES"},"url":"https://ginescollzurita.com/","image":"https://ginescollzurita.com/assets/portrait-880.jpg","sameAs":["https://www.linkedin.com/in/gines-coll-zurita-61520662"]}
@@ -91,6 +91,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
 /* Hero */
 .hero{display:flex;flex-direction:column;gap:40px;padding-block:48px 64px}
 .hero__copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.hero__eyebrow{font-size:13px}
 .hero__title{font:300 clamp(42px,7.2vw,112px)/.95 var(--serif);letter-spacing:-.02em;max-width:13ch}
 .hero__title em{font-weight:500}
 .hero__lede{font-size:clamp(17px,1.4vw,19px);line-height:1.55;max-width:54ch;color:var(--soft)}
@@ -111,7 +112,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
 @media (min-width:900px){
   .hero{flex-direction:row;align-items:center;gap:56px;padding-block:72px}
   .hero__copy{flex:1 1 0}
-  .portrait{order:2;flex:0 0 auto;width:clamp(300px,30vw,420px);margin:0}
+  .portrait{order:2;flex:0 0 auto;width:clamp(280px,24vw,340px);margin:0}
   .portrait figcaption{font-size:18px}
 }
 
@@ -152,7 +153,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
 .kpis .rail-dots{margin-top:0;padding-bottom:18px}
 @media (min-width:900px){
   .kpis .rail{grid-template-columns:repeat(4,1fr)}
-  .kpi{padding:32px 24px}
+  .kpi{width:auto;padding:32px 24px}
   .kpi:first-child{padding-left:0}
   .kpi:last-child{padding-right:0}
 }
@@ -258,7 +259,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
 .footer{background:var(--bg-deep);border-top:1px solid var(--line)}
 .footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;padding-block:56px calc(40px + env(safe-area-inset-bottom))}
 .footer__title{font:300 clamp(44px,6vw,88px)/.95 var(--serif)}
-.footer__meta{flex:1 1 100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-top:24px;border-top:1px solid var(--line-deep)}
+.footer__meta{flex:1 1 100%;padding-top:20px;border-top:1px solid var(--line-deep);opacity:.8}
 
 @media (max-width:899px){
   .hero .ctas .btn--primary{flex:1 1 100%}
@@ -285,7 +286,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
       <svg class="portrait__leaf" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 110C60 70 70 40 108 14 96 54 82 80 60 110Z" fill="#7fd08c"/><path d="M60 110C58 78 40 52 10 40c12 34 28 56 50 70Z" fill="#4fb06c"/></svg>
       <div class="portrait__frame">
         <picture>
-          <source type="image/webp" srcset="assets/portrait-440.webp 440w, assets/portrait-880.webp 880w" sizes="(max-width: 899px) 220px, 420px">
+          <source type="image/webp" srcset="assets/portrait-440.webp 440w, assets/portrait-880.webp 880w" sizes="(max-width: 899px) 220px, 340px">
           <img src="assets/portrait-880.jpg" width="800" height="1000" alt="Portrait of Ginés Coll Zurita" fetchpriority="high">
         </picture>
       </div>
@@ -293,7 +294,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
     </figure>
 
     <div class="hero__copy">
-      <p class="mono">Ginés Coll Zurita · Growth &amp; CRO Manager · Barcelona</p>
+      <p class="mono hero__eyebrow">Ginés Coll Zurita · Growth &amp; CRO Manager · Barcelona</p>
       <h1 id="hero-title" class="hero__title">Experimentation programs that <em class="gold">grow</em> conversion and <em class="coral">revenue.</em></h1>
       <p class="hero__lede">I lead A/B testing end to end, from research and test design to statistics and the business case. Six years turning web and app data into product decisions.</p>
 
@@ -312,7 +313,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>
           Connect on LinkedIn
         </a>
-        <a class="btn btn--ghost" href="mailto:gines.coll93@gmail.com">Get in touch</a>
+        <a class="btn btn--ghost" href="mailto:hello@ginescollzurita.com">Get in touch</a>
         <a class="btn btn--link" href="Gines-Coll-Zurita-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
       </div>
     </div>
@@ -385,7 +386,7 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
           <div><div class="result__num gold">+3.9%</div><div class="result__label">purchase conversion, significant</div></div>
           <div><div class="result__num">+6.2%</div><div class="result__label">revenue per visitor</div></div>
         </div>
-        <details class="note mono">
+        <details class="note mono" open>
           <summary>Field note</summary>
           <p>A reverse test after the native rebuild came out flat, so the next test is the original design against the rebuild.</p>
         </details>
@@ -460,11 +461,10 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
     <p class="footer__title">More plates <em class="coral">in the drawer.</em></p>
     <div class="ctas">
       <a class="btn btn--primary" href="https://www.linkedin.com/in/gines-coll-zurita-61520662" rel="me noopener" target="_blank">LinkedIn ↗</a>
-      <a class="btn btn--ghost" href="mailto:gines.coll93@gmail.com">Write to me</a>
+      <a class="btn btn--ghost" href="mailto:hello@ginescollzurita.com">Write to me</a>
     </div>
     <div class="footer__meta mono">
       <span>© <span id="year">2026</span> Ginés Coll Zurita · Barcelona</span>
-      <span>Clients anonymised. Screens redrawn as sketches.</span>
     </div>
   </div>
 </footer>
@@ -506,6 +506,9 @@ a:focus-visible,[tabindex]:focus-visible,summary:focus-visible{outline:2px solid
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
     update();
   });
+  if (window.matchMedia('(max-width: 899px)').matches) {
+    document.querySelectorAll('details.note').forEach(function (d) { d.open = false; });
+  }
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
